@@ -1,25 +1,25 @@
 import * as React from "react";
 import { BottomNavigation, Text } from "react-native-paper";
-import WelcomeScreen from "./app/screens/WelcomeScreen";
+
 import ViewImageScreen from "./app/screens/ViewImageScreen";
 
-const MusicRoute = () => <Text>Music</Text>;
+const StoreRoute = () => <Text>Store</Text>;
 
-const AlbumsRoute = () => <WelcomeScreen />;
+const CarritoRoute = () => <Text>Store</Text>;
 
 const RecentsRoute = () => <ViewImageScreen />;
 
 const MyComponent = () => {
   const [index, setIndex] = React.useState(0);
   const [routes] = React.useState([
-    { key: "music", title: "Music", icon: "playlist-music" },
-    { key: "albums", title: "Albums", icon: "album" },
+    { key: "store", title: "Store", icon: "storefront-outline" },
+    { key: "carrito", title: "Carrito", icon: "cart" },
     { key: "recents", title: "Recents", icon: "history" },
   ]);
 
   const renderScene = BottomNavigation.SceneMap({
-    music: MusicRoute,
-    albums: AlbumsRoute,
+    store: StoreRoute,
+    carrito: CarritoRoute,
     recents: RecentsRoute,
   });
 
