@@ -28,6 +28,9 @@ function WelcomeScreen({ screenName }) {
           secureTextEntry
           right={<TextInput.Icon name="eye" />}
         />
+        <View style={styles.loginbutton}>
+          <Button mode="contained">Login (deshabilitado solo mockup)</Button>
+        </View>
       </View>
       <Button
         style={styles.omitirButton}
@@ -84,6 +87,11 @@ const styles = StyleSheet.create({
     width: "100%",
     justifyContent: "center",
     bottom: 250,
+  },
+  loginbutton: {
+    top: 8,
+    elevation: 1,
+    //backgroundColor: "#FFF",
   },
   textlogo: {
     color: "#FFF",
