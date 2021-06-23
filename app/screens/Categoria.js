@@ -10,7 +10,20 @@ import {
 
 const Categoria = (props) => {
   const [expanded, setExpanded] = React.useState(true);
-  const [checked, setChecked] = React.useState(false);
+  //casilleros chequeados
+  const [checked1, setChecked1] = React.useState(false);
+  const [checked2, setChecked2] = React.useState(false);
+  const [checked3, setChecked3] = React.useState(false);
+  const [checked4, setChecked4] = React.useState(false);
+  const [checked5, setChecked5] = React.useState(false);
+  //precio de los items
+  const [precios] = React.useState([
+    Math.floor(Math.random() * 1000),
+    Math.floor(Math.random() * 1000),
+    Math.floor(Math.random() * 1000),
+    Math.floor(Math.random() * 1000),
+    Math.floor(Math.random() * 1000),
+  ]);
 
   const handlePress = () => setExpanded(!expanded);
 
@@ -30,48 +43,38 @@ const Categoria = (props) => {
             onPress={handlePress}
           >
             <Checkbox.Item
-              label={`Item 1                           $${Math.floor(
-                Math.random() * 1000
-              )}`}
-              status={checked ? "checked" : "unchecked"}
+              label={`Item 1                           $${precios[0]}`}
+              status={checked1 ? "checked" : "unchecked"}
               onPress={() => {
-                setChecked(!checked);
+                setChecked1(!checked1);
               }}
             />
             <Checkbox.Item
-              label={`Item 2                           $${Math.floor(
-                Math.random() * 1000
-              )}`}
-              status={checked ? "checked" : "unchecked"}
+              label={`Item 2                           $${precios[1]}`}
+              status={checked2 ? "checked" : "unchecked"}
               onPress={() => {
-                setChecked(!checked);
+                setChecked2(!checked2);
               }}
             />
             <Checkbox.Item
-              label={`Item 3                           $${Math.floor(
-                Math.random() * 1000
-              )}`}
-              status={checked ? "checked" : "unchecked"}
+              label={`Item 3                           $${precios[2]}`}
+              status={checked3 ? "checked" : "unchecked"}
               onPress={() => {
-                setChecked(!checked);
+                setChecked3(!checked3);
               }}
             />
             <Checkbox.Item
-              label={`Item 4                           $${Math.floor(
-                Math.random() * 1000
-              )}`}
-              status={checked ? "checked" : "unchecked"}
+              label={`Item 4                           $${precios[3]}`}
+              status={checked4 ? "checked" : "unchecked"}
               onPress={() => {
-                setChecked(!checked);
+                setChecked4(!checked4);
               }}
             />
             <Checkbox.Item
-              label={`Item 5                           $${Math.floor(
-                Math.random() * 1000
-              )}`}
-              status={checked ? "checked" : "unchecked"}
+              label={`Item 5                           $${precios[4]}`}
+              status={checked5 ? "checked" : "unchecked"}
               onPress={() => {
-                setChecked(!checked);
+                setChecked5(!checked5);
               }}
             />
           </List.Accordion>

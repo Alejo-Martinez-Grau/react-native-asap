@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "paperapp",
-    "slug": "paperapp",
+    "name": "alejo-react-native-asap",
+    "slug": "alejo-react-native-asap",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
@@ -27,6 +27,8 @@
     },
     "web": {
       "favicon": "./assets/favicon.png"
-    }
+    },
+    "description": "# react-native-asap\n\nApp desarrollada con:\n\n- React Native\n- Expo\n- React Native Paper (UI)\n- React Navigation\n\nLa misma es un mockup de una app de e-commerce.\nFalta realizar:\n- Validaciones de usuarios\n- Lógica de operaciones para el carrito y el store\n- Backend",
+    "githubUrl": "https://github.com/Alejo-Martinez-Grau/react-native-asap"
   }
 }
