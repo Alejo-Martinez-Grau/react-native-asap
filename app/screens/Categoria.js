@@ -30,35 +30,45 @@ const Categoria = (props) => {
             onPress={handlePress}
           >
             <Checkbox.Item
-              label="Item 1"
+              label={`Item 1                           $${Math.floor(
+                Math.random() * 1000
+              )}`}
               status={checked ? "checked" : "unchecked"}
               onPress={() => {
                 setChecked(!checked);
               }}
             />
             <Checkbox.Item
-              label="Item 2"
+              label={`Item 2                           $${Math.floor(
+                Math.random() * 1000
+              )}`}
               status={checked ? "checked" : "unchecked"}
               onPress={() => {
                 setChecked(!checked);
               }}
             />
             <Checkbox.Item
-              label="Item 3"
+              label={`Item 3                           $${Math.floor(
+                Math.random() * 1000
+              )}`}
               status={checked ? "checked" : "unchecked"}
               onPress={() => {
                 setChecked(!checked);
               }}
             />
             <Checkbox.Item
-              label="Item 4"
+              label={`Item 4                           $${Math.floor(
+                Math.random() * 1000
+              )}`}
               status={checked ? "checked" : "unchecked"}
               onPress={() => {
                 setChecked(!checked);
               }}
             />
             <Checkbox.Item
-              label="Item 5"
+              label={`Item 5                           $${Math.floor(
+                Math.random() * 1000
+              )}`}
               status={checked ? "checked" : "unchecked"}
               onPress={() => {
                 setChecked(!checked);
