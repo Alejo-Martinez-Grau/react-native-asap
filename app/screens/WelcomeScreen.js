@@ -1,9 +1,11 @@
 import React from "react";
 import { ImageBackground, StyleSheet, View, Image, Text } from "react-native";
 import { useNavigation } from "@react-navigation/native";
-import { Button } from "react-native-paper";
+import { Button, TextInput } from "react-native-paper";
 
 function WelcomeScreen({ screenName }) {
+  const [text, setText] = React.useState("");
+
   const navigation = useNavigation();
   return (
     <ImageBackground
@@ -14,7 +16,20 @@ function WelcomeScreen({ screenName }) {
         <Image style={styles.logo} source={require("../assets/logo.png")} />
         <Text style={styles.textlogo}>Vendé lo que no necesitás</Text>
       </View>
-
+      <View style={styles.login}>
+        <TextInput
+          mode="outlined"
+          label="Outlined input"
+          placeholder="Type something"
+          right={<TextInput.Affix text="/100" />}
+        />
+        <TextInput
+          mode="outlined"
+          label="Password"
+          secureTextEntry
+          right={<TextInput.Icon name="eye" />}
+        />
+      </View>
       <Button
         style={styles.omitirButton}
         mode="contained"
@@ -61,7 +76,7 @@ const styles = StyleSheet.create({
   omitirButton: {
     position: "absolute",
     bottom: 200,
-    justifyContent: "center",
+
     alignItems: "center",
   },
 
@@ -74,6 +89,11 @@ const styles = StyleSheet.create({
     position: "absolute",
     top: 70,
     alignItems: "center",
+  },
+  login: {
+    width: "100%",
+    justifyContent: "center",
+    bottom: 300,
   },
   textlogo: {
     color: "#FFF",
