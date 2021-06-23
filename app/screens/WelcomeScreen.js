@@ -14,9 +14,9 @@ function WelcomeScreen({ screenName }) {
         <Image style={styles.logo} source={require("../assets/logo.png")} />
         <Text style={styles.textlogo}>Vendé lo que no necesitás</Text>
       </View>
-      {/* <View style={styles.loginButton}> */}
+
       <Button
-        style={styles.loginButton}
+        style={styles.omitirButton}
         mode="contained"
         onPress={() => {
           /* 1. Navigate to the Details route with params */
@@ -26,11 +26,22 @@ function WelcomeScreen({ screenName }) {
           });
         }}
       >
-        Go to Details
+        Omitir
       </Button>
-      {/* </View> */}
 
-      <View style={styles.registerButton}></View>
+      <Button
+        style={styles.registerButton}
+        mode="contained"
+        onPress={() => {
+          /* 1. Navigate to the Details route with params */
+          navigation.navigate(screenName, {
+            itemId: 86,
+            otherParam: "anything you want here",
+          });
+        }}
+      >
+        Registrarse
+      </Button>
     </ImageBackground>
   );
 }
@@ -41,17 +52,19 @@ const styles = StyleSheet.create({
     justifyContent: "flex-end",
     alignItems: "center",
   },
-  loginButton: {
+  registerButton: {
     width: "100%",
     height: 70,
     justifyContent: "center",
     backgroundColor: "#fc5c65",
   },
-  registerButton: {
-    width: "100%",
-    height: 70,
-    backgroundColor: "#4ecdc4",
+  omitirButton: {
+    position: "absolute",
+    bottom: 200,
+    justifyContent: "center",
+    alignItems: "center",
   },
+
   logo: {
     width: 100,
     height: 100,
