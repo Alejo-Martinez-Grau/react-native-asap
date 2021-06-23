@@ -8,7 +8,7 @@ import {
   Checkbox,
 } from "react-native-paper";
 
-const Categoria = () => {
+const Categoria = (props) => {
   const [expanded, setExpanded] = React.useState(true);
   const [checked, setChecked] = React.useState(false);
 
@@ -17,13 +17,14 @@ const Categoria = () => {
   return (
     <Card>
       <Card.Content>
-        <Title>Categoria 1</Title>
+        <Title>{props.children}</Title>
       </Card.Content>
-      <Card.Cover source={{ uri: "https://picsum.photos/700" }} />
+      <Card.Cover source={{ uri: `${props.picsum}` }} />
+
       <Card.Actions>
         <List.Section width="100%">
           <List.Accordion
-            title="Items categoria 1"
+            title={`"Items ${props.children}"`}
             left={(props) => <List.Icon {...props} icon="expand-all" />}
             expanded={expanded}
             onPress={handlePress}
