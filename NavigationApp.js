@@ -3,26 +3,29 @@ import { View, Text, Button } from "react-native";
 import { NavigationContainer } from "@react-navigation/native";
 import { createStackNavigator } from "@react-navigation/stack";
 
-function HomeScreen({ navigation }) {
+import WelcomeScreen from "./app/screens/WelcomeScreen";
+
+function HomeScreen({ navigation, screenName }) {
   return (
-    <View style={{ flex: 1, alignItems: "center", justifyContent: "center" }}>
-      <Text style={{ fontSize: 30 }}>This is the home screen!</Text>
-      <Button
-        title="Go to Details"
-        onPress={() => {
-          /* 1. Navigate to the Details route with params */
-          navigation.navigate("Details", {
-            itemId: 86,
-            otherParam: "anything you want here",
-          });
-        }}
-      />
-      <Text style={{ fontSize: 30 }}>Modal!</Text>
-      <Button
-        onPress={() => navigation.navigate("MyModal")}
-        title="Open Modal"
-      />
-    </View>
+    <WelcomeScreen screenName="Details" />
+    // <View style={{ flex: 1, alignItems: "center", justifyContent: "center" }}>
+    //   <Text style={{ fontSize: 30 }}>This is the home screen!</Text>
+    //   <Button
+    //     title="Go to Details"
+    //     onPress={() => {
+    //       /* 1. Navigate to the Details route with params */
+    //       navigation.navigate("Details", {
+    //         itemId: 86,
+    //         otherParam: "anything you want here",
+    //       });
+    //     }}
+    //   />
+    //   <Text style={{ fontSize: 30 }}>Modal!</Text>
+    //   <Button
+    //     onPress={() => navigation.navigate("MyModal")}
+    //     title="Open Modal"
+    //   />
+    // </View>
   );
 }
 
