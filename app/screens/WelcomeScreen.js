@@ -19,9 +19,8 @@ function WelcomeScreen({ screenName }) {
       <View style={styles.login}>
         <TextInput
           mode="outlined"
-          label="Outlined input"
-          placeholder="Type something"
-          right={<TextInput.Affix text="/100" />}
+          label="Usuario"
+          placeholder="Ingrese su Usuario"
         />
         <TextInput
           mode="outlined"
@@ -47,13 +46,8 @@ function WelcomeScreen({ screenName }) {
       <Button
         style={styles.registerButton}
         mode="contained"
-        onPress={() => {
-          /* 1. Navigate to the Details route with params */
-          navigation.navigate(screenName, {
-            itemId: 86,
-            otherParam: "anything you want here",
-          });
-        }}
+        onPress={() => navigation.navigate("MyModal")}
+        title="Open Modal"
       >
         Registrarse
       </Button>
@@ -76,7 +70,6 @@ const styles = StyleSheet.create({
   omitirButton: {
     position: "absolute",
     bottom: 200,
-
     alignItems: "center",
   },
 
@@ -93,7 +86,7 @@ const styles = StyleSheet.create({
   login: {
     width: "100%",
     justifyContent: "center",
-    bottom: 300,
+    bottom: 250,
   },
   textlogo: {
     color: "#FFF",
