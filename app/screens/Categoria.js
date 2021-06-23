@@ -17,13 +17,9 @@ const Categoria = (props) => {
   const [checked4, setChecked4] = React.useState(false);
   const [checked5, setChecked5] = React.useState(false);
   //precio de los items
-  const [precios] = React.useState([
-    Math.floor(Math.random() * 1000),
-    Math.floor(Math.random() * 1000),
-    Math.floor(Math.random() * 1000),
-    Math.floor(Math.random() * 1000),
-    Math.floor(Math.random() * 1000),
-  ]);
+  const [precios] = React.useState(
+    [...Array(5)].map(() => Math.floor(Math.random() * 1000))
+  );
 
   const handlePress = () => setExpanded(!expanded);
 
