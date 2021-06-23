@@ -1,10 +1,9 @@
 import * as React from "react";
 import { BottomNavigation, Text } from "react-native-paper";
-import Categoria from "./Categoria";
 
-import ViewImageScreen from "./ViewImageScreen";
+import ComponenteCategorias from "./ComponenteCategorias";
 
-const StoreRoute = () => <Categoria />;
+const StoreRoute = () => <ComponenteCategorias />;
 
 const CarritoRoute = () => <Text>Carrito</Text>;
 

@@ -1,8 +1,16 @@
 import * as React from "react";
-import { Avatar, Button, Card, Title, List } from "react-native-paper";
+import {
+  Avatar,
+  Button,
+  Card,
+  Title,
+  List,
+  Checkbox,
+} from "react-native-paper";
 
 const Categoria = () => {
   const [expanded, setExpanded] = React.useState(true);
+  const [checked, setChecked] = React.useState(false);
 
   const handlePress = () => setExpanded(!expanded);
 
@@ -20,8 +28,41 @@ const Categoria = () => {
             expanded={expanded}
             onPress={handlePress}
           >
-            <List.Item title="First item" />
-            <List.Item title="Second item" />
+            <Checkbox.Item
+              label="Item 1"
+              status={checked ? "checked" : "unchecked"}
+              onPress={() => {
+                setChecked(!checked);
+              }}
+            />
+            <Checkbox.Item
+              label="Item 2"
+              status={checked ? "checked" : "unchecked"}
+              onPress={() => {
+                setChecked(!checked);
+              }}
+            />
+            <Checkbox.Item
+              label="Item 3"
+              status={checked ? "checked" : "unchecked"}
+              onPress={() => {
+                setChecked(!checked);
+              }}
+            />
+            <Checkbox.Item
+              label="Item 4"
+              status={checked ? "checked" : "unchecked"}
+              onPress={() => {
+                setChecked(!checked);
+              }}
+            />
+            <Checkbox.Item
+              label="Item 5"
+              status={checked ? "checked" : "unchecked"}
+              onPress={() => {
+                setChecked(!checked);
+              }}
+            />
           </List.Accordion>
         </List.Section>
       </Card.Actions>
