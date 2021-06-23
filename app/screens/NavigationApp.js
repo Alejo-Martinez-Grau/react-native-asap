@@ -3,8 +3,8 @@ import { View, Text, Button, ImageBackground } from "react-native";
 import { NavigationContainer } from "@react-navigation/native";
 import { createStackNavigator } from "@react-navigation/stack";
 
-import WelcomeScreen from "./app/screens/WelcomeScreen";
-import MyComponent from "./MyComponent";
+import WelcomeScreen from "./WelcomeScreen";
+import Store from "./Store";
 
 function HomeScreen({ navigation, screenName }) {
   return <WelcomeScreen screenName="Store" />;
@@ -14,7 +14,7 @@ function ModalScreen({ navigation }) {
   return (
     <ImageBackground
       style={{ flex: 1, alignItems: "center", justifyContent: "center" }}
-      source={require("./app/assets/bando.jpg")}
+      source={require("../assets/bando.jpg")}
     >
       <View>
         <Text
@@ -56,7 +56,7 @@ function ModalScreen({ navigation }) {
 // }
 
 function StoreScreen({ navigation, screenName }) {
-  return <MyComponent screenName="Store" />;
+  return <Store screenName="Store" />;
 }
 
 const MainStack = createStackNavigator();

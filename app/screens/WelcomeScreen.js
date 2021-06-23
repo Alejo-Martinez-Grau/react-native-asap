@@ -34,10 +34,7 @@ function WelcomeScreen({ screenName }) {
         mode="contained"
         onPress={() => {
           /* 1. Navigate to the Details route with params */
-          navigation.navigate(screenName, {
-            itemId: 86,
-            otherParam: "anything you want here",
-          });
+          navigation.navigate(screenName);
         }}
       >
         Omitir
