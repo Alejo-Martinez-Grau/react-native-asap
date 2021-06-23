@@ -1,9 +1,11 @@
 import * as React from "react";
 import { AppRegistry } from "react-native";
 import { DefaultTheme, Provider as PaperProvider } from "react-native-paper";
-import WelcomeScreen from "./app/screens/WelcomeScreen";
 import { name as appName } from "./app.json";
-import MyComponent from "./MyComponent";
+
+//import WelcomeScreen from "./app/screens/WelcomeScreen";
+//import MyComponent from "./MyComponent";
+import NavigationApp from "./NavigationApp";
 
 const theme = {
   ...DefaultTheme,
@@ -18,7 +20,8 @@ export default function Main() {
   return (
     <PaperProvider theme={theme}>
       {/* <WelcomeScreen /> */}
-      <MyComponent />
+      {/* <MyComponent /> */}
+      <NavigationApp />
     </PaperProvider>
   );
 }
